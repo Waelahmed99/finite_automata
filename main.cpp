@@ -6,7 +6,7 @@ using namespace std;
 
 char graph[1000][1000];
 
-bool match(char *arr, int size, string pattern, int endState,  int pos = 0, int state1 = 1, int state2 = 2) {
+bool match(string pattern, int endState,  int pos = 0, int state1 = 1, int state2 = 2) {
     if (state1 == endState)
         return true;
     if (graph[state1][state2] == '-')
@@ -15,9 +15,9 @@ bool match(char *arr, int size, string pattern, int endState,  int pos = 0, int 
         return false;
 
     if (pattern[pos] == graph[state1][state2])
-        return match(arr, size, pattern, endState, pos + 1, state2, state2 + 1);
+        return match(pattern, endState, pos + 1, state2, state2 + 1);
     else
-        return match(arr, size, pattern, endState, pos, state1, state2 + 1);
+        return match(pattern, endState, pos, state1, state2 + 1);
 }
 
 int main() {
@@ -69,7 +69,7 @@ int main() {
     cin >> pattern;
 
     // look for pattern matching
-    if (match((char *)graph, states, pattern, endState))
+    if (match(pattern, endState))
         cout << "String match " << emojicpp::emojize(":+1:")  << endl;
     else
         cout << "String doesn't match the automata " << emojicpp::emojize(":__1:")  << endl;
