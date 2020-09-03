@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wael/CLionProjects/untitled/emojicpp/emoji.h
+map
+-
+string
+-
+
+/home/wael/CLionProjects/untitled/main.cpp
+iostream
+-
+map
+-
+emojicpp/emoji.h
+/home/wael/CLionProjects/untitled/emojicpp/emoji.h
+
