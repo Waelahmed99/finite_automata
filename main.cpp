@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-#include "emojicpp/emoji.h"
 
 using namespace std;
 
@@ -70,9 +69,9 @@ int main() {
 
     // look for pattern matching
     if (match(pattern, endState))
-        cout << "String match " << emojicpp::emojize(":+1:")  << endl;
+        cout << "String match " << endl;
     else
-        cout << "String doesn't match the automata " << emojicpp::emojize(":__1:")  << endl;
+        cout << "String doesn't match the automata " << endl;
 
 
     // output the matrix form.
